@@ -45,7 +45,12 @@ body {
   line-height: 1.6;
   position: relative;
   overflow-x: hidden;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  opacity: 0;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.35s ease;
+}
+
+body.page-loaded {
+  opacity: 1;
 }
 
 /* ---------- Ambient background: faint pixel grid ---------- */

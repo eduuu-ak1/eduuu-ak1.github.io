@@ -145,6 +145,22 @@
   </footer>
 
   <script>
+    requestAnimationFrame(() => document.body.classList.add('page-loaded'));
+
+    document.querySelectorAll('a[href]').forEach((link) => {
+      const href = link.getAttribute('href');
+      const isInternalPage = href && (href === 'index.html' || href === 'about.html' || href.startsWith('index.html#') || href.startsWith('about.html#'));
+      if (isInternalPage && link.target !== '_blank') {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.body.classList.remove('page-loaded');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300);
+        });
+      }
+    });
+
     const themeToggle = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme');
 
