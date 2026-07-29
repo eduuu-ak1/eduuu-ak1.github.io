@@ -507,51 +507,76 @@ footer {
   box-shadow: 3px 3px 0 var(--accent);
 }
 
-/* ---------- Theme toggle: reliable pure-CSS square switch ---------- */
+/* ---------- Theme toggle (adapted from Uiverse by alexruix) ---------- */
 .switch {
+  font-size: 17px;
   position: relative;
-  display: inline-flex;
-  width: 50px;
-  height: 26px;
+  display: inline-block;
+  width: 3.2em;
+  height: 1.8em;
   flex-shrink: 0;
 }
 
-.toggle {
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
-  position: absolute;
 }
 
 .slider {
   position: absolute;
-  inset: 0;
   cursor: pointer;
-  background: var(--bg);
-  border: 2px solid var(--ink);
-  border-radius: 0;
-  transition: background-color 0.2s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--line);
+  transition: 0.3s;
+  border-radius: 32px;
+  outline: none;
 }
 
 .slider::before {
-  content: "";
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 16px;
-  height: 16px;
-  background: var(--ink);
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  content: "";
+  height: 1.8em;
+  width: 1.8em;
+  border-radius: 50%;
+  outline: 2px solid var(--line);
+  left: -1px;
+  bottom: -1px;
+  background-color: var(--bg);
+  transition: transform 0.25s ease-in-out 0s;
 }
 
-.toggle:checked + .slider {
-  background: var(--accent-soft);
-  border-color: var(--accent);
+.slider-icon {
+  opacity: 0;
+  height: 12px;
+  width: 12px;
+  stroke-width: 8;
+  position: absolute;
+  z-index: 999;
+  stroke: var(--accent);
+  right: 60%;
+  top: 30%;
+  transition: right ease-in-out 0.3s, opacity ease-in-out 0.15s;
 }
 
-.toggle:checked + .slider::before {
-  transform: translateX(20px);
-  background: var(--accent);
+.switch input:checked + .slider {
+  background-color: var(--ink);
+  border-color: var(--ink);
+}
+
+.switch input:checked + .slider .slider-icon {
+  opacity: 1;
+  right: 20%;
+  stroke: var(--bg);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(1.4em);
+  outline-color: var(--ink);
 }
 
 /* ---------- About page ---------- */
