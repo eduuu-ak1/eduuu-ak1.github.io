@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edu Demayo Nitre — Game Developer</title>
+  <title>Edu Demayo Nitre — Aspiring AI Automation Specialist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -13,8 +13,9 @@
   <nav>
     <div class="logo"><a href="index.html">Edu Demayo Nitre</a></div>
     <ul>
+      <li><a href="index.html" class="active-link">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="#project">Project</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -27,61 +28,180 @@
   </nav>
 
   <section class="hero" id="about">
-    <div class="hero-text">
+    <canvas id="workflow-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
       <p class="eyebrow">Hi, I'm</p>
       <h1>Edu Demayo Nitre</h1>
-      <h2><span class="accent">Junior</span> Game Developer in Godot</h2>
-      <div class="status-list">
-        <div class="status-item">
-          <span class="status-label">Currently</span>
-          <span class="status-value">Learning AI &amp; Data, open to opportunities</span>
-        </div>
-        <div class="status-item">
-          <span class="status-label">Built</span>
-          <span class="status-value">Tower of Knowledge, Top 5 Capstone Project</span>
-        </div>
-        <div class="status-item">
-          <span class="status-label">Past</span>
-          <span class="status-value">IT Intern, Hall of Justice General Santos City</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-image">
-      <div class="photo-frame">
-        <img src="profile.png" alt="Edu Demayo Nitre">
+      <h2><span class="accent">Aspiring</span> AI Automation Specialist</h2>
+      <p class="intro">
+        I build AI-powered automation workflows with n8n, and bring the same
+        problem-solving craft from game development into every system I design.
+      </p>
+      <div class="buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
       </div>
     </div>
   </section>
 
-  <section class="project reveal" id="project">
+  <section class="projects reveal" id="projects">
     <p class="eyebrow">Featured Work</p>
-    <h2>Tower of Knowledge</h2>
-    <p class="project-badge">🏆 Top 5 Capstone Project</p>
-    <p class="project-subtitle">A 2D educational game for learning the fundamentals of Information and Communication Technology</p>
-    <div class="project-content">
-      <div class="project-visual">
-        <video controls poster="gameplay.gif">
-          <source src="trailer.mp4" type="video/mp4">
-          Your browser doesn't support embedded video.
-        </video>
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="project-visual">
+          <video controls poster="gameplay.gif">
+            <source src="trailer.mp4" type="video/mp4">
+            Your browser doesn't support embedded video.
+          </video>
+        </div>
+        <div class="project-card-body">
+          <p class="project-badge">🏆 Top 5 Capstone Project</p>
+          <h3>Tower of Knowledge</h3>
+          <p>
+            A 2D platformer built in Godot Engine that teaches ICT
+            fundamentals through hands-on, level-based challenges. Built
+            end-to-end solo: mechanics, level design, UI, and content.
+          </p>
+          <ul class="tech-tags">
+            <li>Godot Engine</li>
+            <li>GDScript</li>
+            <li>2D Game Design</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <img src="lead-qualification-automation.png" alt="AI-Powered Lead Qualification and Booking Automation workflow in n8n">
+        </div>
+        <div class="project-card-body">
+          <p class="project-badge">⚙️ AI Automation</p>
+          <h3>Lead Qualification &amp; Booking Automation</h3>
+          <p>
+            An n8n workflow that captures incoming leads, qualifies them
+            automatically, and books them directly into a calendar via
+            Cal.com, removing manual back-and-forth from the intake process.
+          </p>
+          <ul class="tech-tags">
+            <li>n8n</li>
+            <li>Webhook APIs</li>
+            <li>CRM Automation</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <img src="email-support-automation.png" alt="AI email support automation workflow in n8n">
+        </div>
+        <div class="project-card-body">
+          <p class="project-badge">⚙️ AI Automation</p>
+          <h3>AI Customer Support Automation</h3>
+          <p>
+            Monitors incoming email and contact form submissions, uses AI to
+            classify inquiries as Simple or Complex, auto-replies to simple
+            ones, and escalates complex cases to the business owner with a
+            structured intake form. Built for a home cleaning service client.
+          </p>
+          <ul class="tech-tags">
+            <li>n8n</li>
+            <li>Gmail</li>
+            <li>OpenAI</li>
+            <li>AI Agents</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <img src="followup-automation.png" alt="Follow-up sequence automation workflow in n8n">
+        </div>
+        <div class="project-card-body">
+          <p class="project-badge">⚙️ AI Automation</p>
+          <h3>Follow-Up Sequence Automation</h3>
+          <p>
+            An automated follow-up messaging sequence that keeps leads and
+            clients engaged after first contact, triggered and tracked
+            without manual intervention.
+          </p>
+          <ul class="tech-tags">
+            <li>n8n</li>
+            <li>Workflow Automation</li>
+            <li>Google Sheets</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="ticker reveal">
+    <p class="eyebrow" style="text-align:center;">Technologies &amp; Integrations</p>
+    <div class="ticker-row">
+      <div class="ticker-track">
+        <span>Workflow Automation</span>
+        <span>REST APIs</span>
+        <span>Prompt Engineering</span>
+        <span>AI Agents</span>
+        <span>AI Automation</span>
+        <span>n8n</span>
+        <span>OpenAI</span>
+        <span>Google Gemini</span>
+        <span>Groq</span>
+        <span>Google Workspace</span>
+        <span>Gmail</span>
+        <span>Google Sheets</span>
+        <span>Webhook APIs</span>
+        <span>CRM Automation</span>
+        <span>Workflow Automation</span>
+        <span>REST APIs</span>
+        <span>Prompt Engineering</span>
+        <span>AI Agents</span>
+        <span>AI Automation</span>
+        <span>n8n</span>
+        <span>OpenAI</span>
+        <span>Google Gemini</span>
+        <span>Groq</span>
+        <span>Google Workspace</span>
+        <span>Gmail</span>
+        <span>Google Sheets</span>
+        <span>Webhook APIs</span>
+        <span>CRM Automation</span>
       </div>
-      <div class="project-details">
-        <p>
-          Tower of Knowledge is a 2D platformer built in Godot Engine as my
-          capstone project. Players climb through levels that teach ICT
-          fundamentals, turning core concepts into hands-on, level-based
-          challenges instead of passive reading.
-        </p>
-        <p>
-          I built this end-to-end as a full stack developer on the project,
-          handling game mechanics, level design, UI, and content all on my
-          own.
-        </p>
-        <ul class="tech-tags">
-          <li>Godot Engine</li>
-          <li>GDScript</li>
-          <li>2D Game Design</li>
-        </ul>
+    </div>
+    <div class="ticker-row">
+      <div class="ticker-track ticker-track-reverse">
+        <span>Gmail</span>
+        <span>Google Sheets</span>
+        <span>Webhook APIs</span>
+        <span>CRM Automation</span>
+        <span>Workflow Automation</span>
+        <span>REST APIs</span>
+        <span>Prompt Engineering</span>
+        <span>AI Agents</span>
+        <span>AI Automation</span>
+        <span>n8n</span>
+        <span>OpenAI</span>
+        <span>Google Gemini</span>
+        <span>Groq</span>
+        <span>Google Workspace</span>
+        <span>Gmail</span>
+        <span>Google Sheets</span>
+        <span>Webhook APIs</span>
+        <span>CRM Automation</span>
+        <span>Workflow Automation</span>
+        <span>REST APIs</span>
+        <span>Prompt Engineering</span>
+        <span>AI Agents</span>
+        <span>AI Automation</span>
+        <span>n8n</span>
+        <span>OpenAI</span>
+        <span>Google Gemini</span>
+        <span>Groq</span>
+        <span>Google Workspace</span>
       </div>
     </div>
   </section>
@@ -93,16 +213,18 @@
       <div class="skill-item">Godot Engine</div>
       <div class="skill-item">GDScript</div>
       <div class="skill-item">2D Game Design</div>
+      <div class="skill-item">AI Automation</div>
+      <div class="skill-item">Workflow Automation (n8n)</div>
+      <div class="skill-item">Prompt Engineering</div>
+      <div class="skill-item">Web Development</div>
       <div class="skill-item">Data Entry &amp; Document Management</div>
       <div class="skill-item">Document Specialist</div>
       <div class="skill-item">Video Editing</div>
       <div class="skill-item">Graphic Design</div>
       <div class="skill-item">Fast Learner &amp; Adaptable</div>
-      <div class="skill-item">UI/UX Design</div>
       <div class="skill-item">Software Development</div>
       <div class="skill-item">Game Design</div>
     </div>
-    <p class="learning-note">Currently learning: Git &amp; GitHub, web development, AI &amp; data</p>
   </section>
 
   <section class="contact reveal" id="contact">
@@ -112,6 +234,7 @@
     <div class="buttons">
       <a href="mailto:edunitre24@gmail.com" class="btn btn-primary">Email Me</a>
       <a href="tel:+639501514487" class="btn btn-secondary">Call Me</a>
+      <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-secondary">View My Resume</a>
     </div>
     <div class="socials" style="justify-content: center;">
       <a href="https://www.linkedin.com/in/edu-demayo-nitre-314478360/" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
@@ -124,6 +247,148 @@
     <p>&copy; 2026 Edu Demayo Nitre. Built from scratch.</p>
   </footer>
   <script>
+    (function () {
+      const canvas = document.getElementById('workflow-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function getAccentRGB() {
+        const hex = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+        const clean = hex.replace('#', '');
+        if (clean.length === 6) {
+          const r = parseInt(clean.substring(0, 2), 16);
+          const g = parseInt(clean.substring(2, 4), 16);
+          const b = parseInt(clean.substring(4, 6), 16);
+          return `${r}, ${g}, ${b}`;
+        }
+        return '47, 95, 168';
+      }
+
+      let width, height, nodes, pulses, accentRGB, tick;
+      const LABELS = ['n8n', 'AI Automation', 'Web Dev', 'Godot', 'GDScript', 'Workflows', 'AI Agents', 'Prompt Engineering'];
+
+      function resize() {
+        const hero = canvas.parentElement;
+        width = canvas.width = hero.offsetWidth;
+        height = canvas.height = hero.offsetHeight;
+      }
+
+      function initNodes() {
+        const count = Math.max(18, Math.min(42, Math.floor((width * height) / 22000)));
+        const shuffledLabels = [...LABELS].sort(() => Math.random() - 0.5);
+        nodes = Array.from({ length: count }, (_, idx) => ({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.32,
+          vy: (Math.random() - 0.5) * 0.32,
+          label: idx < shuffledLabels.length ? shuffledLabels[idx] : null,
+        }));
+        pulses = [];
+        tick = 0;
+      }
+
+      function maybeSpawnPulse(currentEdges) {
+        if (pulses.length >= 6 || currentEdges.length === 0) return;
+        if (Math.random() > 0.025) return;
+        const edge = currentEdges[Math.floor(Math.random() * currentEdges.length)];
+        pulses.push({ i: edge.i, j: edge.j, t: 0, speed: 0.012 + Math.random() * 0.012 });
+      }
+
+      function draw() {
+        accentRGB = getAccentRGB();
+        tick++;
+        ctx.clearRect(0, 0, width, height);
+        const linkDist = Math.min(165, width / 5.8);
+
+        nodes.forEach((n) => {
+          n.x += n.vx;
+          n.y += n.vy;
+          if (n.x < 0 || n.x > width) n.vx *= -1;
+          if (n.y < 0 || n.y > height) n.vy *= -1;
+        });
+
+        const currentEdges = [];
+
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < linkDist) {
+              const opacity = (1 - dist / linkDist) * 0.18;
+              ctx.strokeStyle = `rgba(${accentRGB}, ${opacity})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.stroke();
+              currentEdges.push({ i, j });
+            }
+          }
+        }
+
+        maybeSpawnPulse(currentEdges);
+
+        pulses = pulses.filter((p) => p.t < 1);
+        pulses.forEach((p) => {
+          p.t += p.speed;
+          const a = nodes[p.i];
+          const b = nodes[p.j];
+          if (!a || !b) return;
+          const px = a.x + (b.x - a.x) * p.t;
+          const py = a.y + (b.y - a.y) * p.t;
+          const pulse = 1 - Math.abs(p.t - 0.5) * 1.5;
+          const shimmer = 0.55 + Math.sin(tick * 0.08 + p.t * 10) * 0.15;
+          ctx.beginPath();
+          ctx.arc(px, py, 3.2, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${accentRGB}, ${Math.max(0.15, pulse * 0.25)})`;
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(px, py, 1.8, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${accentRGB}, ${Math.max(0.3, pulse * shimmer)})`;
+          ctx.fill();
+        });
+
+        nodes.forEach((n) => {
+          const breathe = n.label ? 1 + Math.sin(tick * 0.02 + n.x) * 0.08 : 1;
+          const size = (n.label ? 6.5 : 3) * breathe;
+          ctx.fillStyle = n.label ? `rgba(${accentRGB}, 0.42)` : `rgba(${accentRGB}, 0.24)`;
+          ctx.strokeStyle = `rgba(${accentRGB}, 0.42)`;
+          ctx.lineWidth = 1.2;
+          ctx.beginPath();
+          ctx.rect(n.x - size / 2, n.y - size / 2, size, size);
+          ctx.fill();
+          if (n.label) ctx.stroke();
+
+          if (n.label) {
+            ctx.font = '10px "JetBrains Mono", monospace';
+            ctx.fillStyle = `rgba(${accentRGB}, 0.38)`;
+            ctx.textBaseline = 'middle';
+            ctx.fillText(n.label, n.x + 12, n.y);
+          }
+        });
+
+        if (!prefersReducedMotion) {
+          requestAnimationFrame(draw);
+        }
+      }
+
+      function start() {
+        resize();
+        initNodes();
+        draw();
+      }
+
+      window.addEventListener('resize', () => {
+        resize();
+        initNodes();
+        if (prefersReducedMotion) draw();
+      });
+
+      start();
+    })();
+
     requestAnimationFrame(() => document.body.classList.add('page-loaded'));
 
     document.querySelectorAll('a[href]').forEach((link) => {
@@ -139,7 +404,6 @@
         });
       }
     });
-
     const themeToggle = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme');
 
