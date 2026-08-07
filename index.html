@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edu Demayo Nitre — Aspiring AI Automation Specialist</title>
+  <title>Edu Demayo Nitre — Aspiring Software Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -11,10 +11,10 @@
 <body>
 
   <nav>
-    <div class="logo"><a href="index.html">Edu Demayo Nitre</a></div>
+    <div class="logo"><a href="#hero">Edu Demayo Nitre</a></div>
     <ul>
-      <li><a href="index.html" class="active-link">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="#hero" class="active-link">Home</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -27,19 +27,112 @@
     </label>
   </nav>
 
-  <section class="hero" id="about">
+  <section class="hero" id="hero">
     <canvas id="workflow-canvas" aria-hidden="true"></canvas>
     <div class="hero-content">
       <p class="eyebrow">Hi, I'm</p>
       <h1>Edu Demayo Nitre</h1>
-      <h2><span class="accent">Aspiring</span> AI Automation Specialist</h2>
+      <h2><span class="accent">Aspiring</span> Software Developer</h2>
       <p class="intro">
-        I build AI-powered automation workflows with n8n, and bring the same
-        problem-solving craft from game development into every system I design.
+        I build things across web, games, and automation &mdash; always picking
+        up new tools and shipping real projects along the way.
       </p>
       <div class="buttons">
         <a href="#projects" class="btn btn-primary">View Projects</a>
         <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-hero reveal" id="about">
+    <div class="about-text">
+      <p class="eyebrow">About Me</p>
+      <h1>Hi, I'm Edu.</h1>
+      <p class="intro">
+        I'm a BSIT graduate of STI College General Santos City with a habit of
+        picking up new tools and turning them into finished projects. My path
+        started in game development, moved through document and data work,
+        and is now heading toward AI and data. Here's how that happened.
+      </p>
+      <div class="status-list">
+        <div class="status-item">
+          <span class="status-label">Currently</span>
+          <span class="status-value">Learning AI &amp; Data, open to opportunities</span>
+        </div>
+      </div>
+      <div class="buttons">
+        <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">View My Resume</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="photo-frame">
+        <img src="aboutme.png" alt="Edu Demayo Nitre" class="photo-base">
+        <img src="profile.png" alt="Edu Demayo Nitre" class="photo-hover">
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline reveal" id="journey">
+    <p class="eyebrow">My Journey</p>
+    <h2>Where I've Been</h2>
+
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <span class="timeline-year">2022 &ndash; 2026</span>
+        <div class="timeline-body">
+          <h3>BSIT, STI College General Santos City</h3>
+          <p>
+            Studied Information Technology, building the foundation for
+            everything I've done since, from game logic to data handling.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">Capstone</span>
+        <div class="timeline-body">
+          <h3>Tower of Knowledge, Top 5 Capstone Project</h3>
+          <p>
+            Designed and built a 2D educational game in Godot Engine that
+            teaches ICT fundamentals through level-based challenges. I
+            handled the full build myself: mechanics, level design, UI,
+            and content.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">Internship</span>
+        <div class="timeline-body">
+          <h3>IT Intern, Hall of Justice, General Santos City</h3>
+          <p>
+            Supported document management, Excel-based billing, data entry,
+            data comparison, and technical support in a legal office
+            setting where accuracy actually mattered.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">TESDA</span>
+        <div class="timeline-body">
+          <h3>Work Immersion, Computer Systems Servicing NC II</h3>
+          <p>
+            Completed hands-on training at Holy Trinity College, building
+            practical hardware and systems troubleshooting skills.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">Leadership</span>
+        <div class="timeline-body">
+          <h3>2nd Year Chairperson, Royal Knights STI General Santos</h3>
+          <p>
+            Took on an organizational leadership role, coordinating with
+            classmates and officers outside of coursework.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -271,6 +364,7 @@
         <button type="button" class="chat-chip" data-q="skills">Skills</button>
         <button type="button" class="chat-chip" data-q="contact">Contact</button>
         <button type="button" class="chat-chip" data-q="about">About Edu</button>
+        <button type="button" class="chat-chip" data-q="hire">Hire Me</button>
       </div>
       <form class="chat-input-row" id="chat-form">
         <input type="text" id="chat-input" placeholder="Type a question..." autocomplete="off">
@@ -423,19 +517,6 @@
 
     requestAnimationFrame(() => document.body.classList.add('page-loaded'));
 
-    document.querySelectorAll('a[href]').forEach((link) => {
-      const href = link.getAttribute('href');
-      const isInternalPage = href && (href === 'index.html' || href === 'about.html' || href.startsWith('index.html#') || href.startsWith('about.html#'));
-      if (isInternalPage && link.target !== '_blank') {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          document.body.classList.remove('page-loaded');
-          setTimeout(() => {
-            window.location.href = href;
-          }, 300);
-        });
-      }
-    });
     const themeToggle = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme');
 
@@ -462,29 +543,71 @@
   
     (function () {
       const faqs = [
-        { keywords: ['who are you', 'about you', 'who is edu', 'introduce', 'yourself'], answer: "I'm Edu Demayo Nitre, a BSIT graduate from STI College General Santos City. I build AI automation workflows with n8n, and I'm also a Godot game developer." },
+        { keywords: ['who are you', 'about you', 'who is edu', 'introduce', 'yourself'], answer: "I'm Edu Demayo Nitre, a BSIT graduate from STI College General Santos City. I build things across web, games, and automation, and I'm always picking up new tools." },
         { keywords: ['project', 'tower of knowledge', 'game', 'built', 'portfolio piece'], answer: "My featured project is Tower of Knowledge, a 2D educational game built in Godot Engine and a Top 5 Capstone Project. I've also built AI automation workflows in n8n: lead qualification & booking automation, AI customer support automation, and a follow-up sequence automation. Check the Projects section for details!" },
         { keywords: ['automation', 'n8n', 'workflow', 'ai agent'], answer: "I build AI-powered automation workflows using n8n, integrating tools like Gmail, OpenAI, Google Sheets, and webhook APIs. See the Projects and Skills sections for real examples." },
         { keywords: ['skill', 'skills', 'what can you do', 'tech stack', 'technologies'], answer: "My skills include Godot Engine, GDScript, AI Automation, Workflow Automation with n8n, Prompt Engineering, Web Development, Data Entry & Document Management, Video Editing, Graphic Design, and more. Full list is in the Skills section." },
-        { keywords: ['contact', 'email', 'reach', 'hire', 'get in touch'], answer: "You can reach Edu at edunitre24@gmail.com, call +63 950 151 4487, or connect via LinkedIn, Facebook, or Instagram \u2014 links are in the Contact section." },
-        { keywords: ['resume', 'cv'], answer: "Yes! You can view or download Edu's resume from the button in the About page or the Contact section." },
-        { keywords: ['job', 'hiring', 'opportunit', 'available', 'looking for work'], answer: "Edu is currently open to opportunities in AI automation and data roles. Feel free to reach out through the Contact section!" },
+        { keywords: ['contact', 'email', 'reach', 'get in touch'], answer: "You can reach Edu at edunitre24@gmail.com, call +63 950 151 4487, or connect via LinkedIn, Facebook, or Instagram \u2014 links are in the Contact section." },
+        { keywords: ['resume', 'cv'], answer: "Yes! You can view or download Edu's resume from the button in the About section or the Contact section." },
+        { keywords: ['hire', 'available for hire', 'full-time', 'freelance', 'open to work', 'work with you'], answer: "Edu is open to full-time opportunities and works fully remote. Reach out via the Contact section to start a conversation!" },
+        { keywords: ['job', 'hiring', 'opportunit', 'looking for work'], answer: "Edu is currently open to full-time opportunities in AI automation and data roles, working fully remote. Feel free to reach out through the Contact section!" },
         { keywords: ['education', 'school', 'college', 'study', 'degree'], answer: "Edu is a BSIT graduate from STI College General Santos City, Philippines." },
+        { keywords: ['where are you', 'location', 'based', 'live', 'city'], answer: "Edu is based in General Santos City, Philippines, and is open to fully remote work." },
+        { keywords: ['remote', 'work from home', 'onsite', 'on-site'], answer: "Yes, Edu works fully remote." },
+        { keywords: ['why hire', 'why should', 'what makes you different', 'unique', 'stand out'], answer: "Edu blends hands-on game development (Godot Engine) with growing AI automation expertise (n8n) \u2014 a rare combination that brings real problem-solving craft to every automation system, backed by a Top 5 capstone project and real automation builds for a client scenario." },
+        { keywords: ['experience', 'how long', 'years of experience', 'junior', 'senior', 'background in'], answer: "Edu is a fresh BSIT graduate who has built real hands-on experience through an IT internship at a legal office, a Top 5 capstone game project, and multiple self-built AI automation workflows \u2014 a fast learner who ships real projects quickly." },
+        { keywords: ['what is n8n'], answer: "n8n is a workflow automation tool \u2014 it lets you connect apps like Gmail, Google Sheets, and AI models together so tasks happen automatically without manual work. It's the main tool Edu uses to build automations." },
+        { keywords: ['what is ai automation', 'what does ai automation mean'], answer: "AI automation means using AI models alongside automated workflows to handle tasks that normally need a human \u2014 like reading an email, deciding how to respond, and sending a reply automatically." },
+        { keywords: ['favorite project', 'best project', 'proudest'], answer: "Tower of Knowledge is the one Edu's proudest of \u2014 a full solo-built game that placed Top 5 in the capstone batch." },
+        { keywords: ['student', 'still studying', 'graduated'], answer: "Edu has already graduated with a BSIT degree from STI College General Santos City." },
+        { keywords: ['programming language', 'code in', 'languages do you know'], answer: "Edu codes primarily in GDScript (for Godot game development) and works with the JavaScript/HTML/CSS that powers this very portfolio site." },
+        { keywords: ['github', 'source code', 'see your code'], answer: "Edu's code isn't publicly linked right now, but you can see real project write-ups and demos in the Projects section, plus the resume for more detail." },
+        { keywords: ['help', 'what can i ask', 'what can you answer'], answer: "You can ask me about Edu's projects, skills, background, education, location, availability, or how to get in touch \u2014 try tapping one of the quick buttons below too!" },
       ];
+
+      const GREETING_WORDS = ['hi', 'hello', 'hey', 'yo', 'good morning', 'good afternoon', 'good evening'];
+      const THANKS_WORDS = ['thanks', 'thank you', 'thx', 'appreciate it'];
+      const BYE_WORDS = ['bye', 'goodbye', 'see you', 'take care'];
+
+      function matchesWord(lower, phrase) {
+        const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const re = new RegExp('(^|[^a-z])' + escaped + '([^a-z]|$)');
+        return re.test(lower);
+      }
 
       const quickAnswers = {
         projects: faqs[0 + 1].answer,
         skills: faqs[3].answer,
         contact: faqs[4].answer,
         about: faqs[0].answer,
+        hire: faqs[6].answer,
       };
 
       function findAnswer(text) {
-        const lower = text.toLowerCase();
-        for (const faq of faqs) {
-          if (faq.keywords.some((k) => lower.includes(k))) return faq.answer;
+        const lower = text.toLowerCase().trim();
+
+        if (GREETING_WORDS.some((w) => matchesWord(lower, w))) {
+          return "Hey there! 👋 I'm a quick FAQ bot for Edu's portfolio. Ask me about his projects, skills, background, or how to get in touch \u2014 or tap a suggestion below.";
         }
-        return "I'm not sure about that one! Try asking about Edu's projects, skills, background, or how to get in touch \u2014 or email him directly at edunitre24@gmail.com.";
+        if (THANKS_WORDS.some((w) => matchesWord(lower, w))) {
+          return "You're welcome! Let me know if you'd like to know anything else about Edu.";
+        }
+        if (BYE_WORDS.some((w) => matchesWord(lower, w))) {
+          return "Thanks for stopping by! Feel free to reach out through the Contact section anytime. 👋";
+        }
+
+        let bestMatch = null;
+        let bestLength = 0;
+        for (const faq of faqs) {
+          for (const k of faq.keywords) {
+            if (lower.includes(k) && k.length > bestLength) {
+              bestMatch = faq;
+              bestLength = k.length;
+            }
+          }
+        }
+        if (bestMatch) return bestMatch.answer;
+        return "I'm not sure about that one! Try asking about Edu's projects, skills, background, or how to get in touch \u2014 or type \"help\" to see what I can answer.";
       }
 
       const toggle = document.getElementById('chat-toggle');

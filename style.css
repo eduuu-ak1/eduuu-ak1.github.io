@@ -651,6 +651,7 @@ footer {
   gap: 40px;
   align-items: center;
   padding-top: 50px;
+  border-top: 2px solid var(--line);
 }
 
 .about-hero h1 {
